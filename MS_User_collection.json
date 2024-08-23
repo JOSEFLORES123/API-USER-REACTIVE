@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "dad13f52-98ef-4ea9-87b6-97e792f1a1e8",
+		"name": "AAA_User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4317954"
+	},
+	"item": [
+		{
+			"name": "registro Passw no valid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "idtrx",
+						"value": "sdfsdfsd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Juan Rodriguez\",\r\n\t\"email\": \"juan@rodriguez.org\",\r\n\t\"password\": \"hunter2\",\r\n    \"phones\" : [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"5555\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"537\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9084/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registro Ok",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "idtrx",
+						"value": "sdfsdfsd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Juan Rodriguez\",\r\n\t\"email\": \"@user!@dominio@.cl@\",\r\n\t\"password\": \"hunter2\",\r\n    \"phones\" : [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"5555\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"537\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9084/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "idtrx",
+						"value": "sdfsdfsd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"c3cd9d14-dd61-4851-bd2b-b74d6757552a\",\r\n\t\"email\": \"juan@rodriguez.org\",\r\n\t\"password\": \"hunter23334\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9084/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9084/users/:UUID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users",
+						":UUID"
+					],
+					"variable": [
+						{
+							"key": "UUID",
+							"value": "c3cd9d14-dd61-4851-bd2b-b74d6757552a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambio estado",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "idtrx",
+						"value": "sdfsdfsd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"c3cd9d14-dd61-4851-bd2b-b74d6757552a\",\r\n\t\"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9084/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9084/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9084/users/:UUID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9084",
+					"path": [
+						"users",
+						":UUID"
+					],
+					"variable": [
+						{
+							"key": "UUID",
+							"value": "c3cd9d14-dd61-4851-bd2b-b74d6757552a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
